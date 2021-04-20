@@ -249,6 +249,7 @@ a {
 }
 
 .plein:hover {
+  opacity: 1;
   background: -webkit-gradient(
     linear,
     left top,
@@ -260,10 +261,9 @@ a {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+  -webkit-transition: 2s;
+  transition: 2s;
   cursor: pointer;
-  -webkit-transition: 3s;
-  transition: 3s;
-  opacity: 1;
 }
 
 .new {
@@ -304,6 +304,7 @@ footer .mr10 {
   z-index: 1;
   top: 0;
   left: 0;
+  bottom: 0;
   width: 0%;
   height: 100%;
   display: -webkit-box;
@@ -317,11 +318,14 @@ footer .mr10 {
   align-items: center;
   opacity: 0;
   background: #eff1f1;
-  -webkit-animation: blind 3s;
-  animation: blind 3s;
+  -webkit-animation: blind 4s;
+  animation: blind 4s;
+  -webkit-transform-origin: left;
+  transform-origin: left;
 }
 
 .loader .com {
+  opacity: 1;
   background: -webkit-gradient(
     linear,
     left top,
@@ -333,24 +337,26 @@ footer .mr10 {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+  -webkit-transition: 2s;
+  transition: 2s;
   font-family: "Shrikhand", cursive;
   font-size: 3em;
   opacity: 0;
 }
 
 .ap1 {
-  -webkit-animation: wait 2s;
-  animation: wait 2s;
+  -webkit-animation: wait 3s;
+  animation: wait 3s;
 }
 
 .ap2 {
-  -webkit-animation: wait 2s 1s;
-  animation: wait 2s 1s;
+  -webkit-animation: wait 3s 1s;
+  animation: wait 3s 1s;
 }
 
 .ap3 {
-  -webkit-animation: wait 2s 2s;
-  animation: wait 2s 2s;
+  -webkit-animation: wait 3s 2s;
+  animation: wait 3s 2s;
 }
 
 @-webkit-keyframes wait {
@@ -392,30 +398,35 @@ footer .mr10 {
 @-webkit-keyframes blind {
   from {
     width: 100%;
-    opacity: 0.99;
+    opacity: 1;
   }
   to {
     width: 100%;
-    opacity: 0.99;
+    opacity: 1;
   }
 }
 
 @keyframes blind {
   from {
     width: 100%;
-    opacity: 0.99;
+    opacity: 1;
   }
   to {
     width: 100%;
-    opacity: 0.99;
+    opacity: 1;
   }
 }
 
 /* pages 2a5*/
-.header_logo i {
-  position: absolute;
-  top: 20px;
-  left: 20px;
+.header_logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 65%;
+  margin-left: 1em;
 }
 
 .menu {
@@ -616,22 +627,6 @@ footer .mr10 {
 
 /* medias queri*/
 @media only screen and (min-width: 768px) {
-  .header_logo {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    width: 65%;
-    margin-left: 1em;
-  }
-  .header_logo i {
-    position: relative;
-    top: auto;
-    right: auto;
-    font-size: 20px;
-  }
   body {
     margin: auto;
     max-width: 1440px;
